@@ -3,3 +3,4 @@ metadata.json
 metadata/
 cache/
 artifacts/
+.env
