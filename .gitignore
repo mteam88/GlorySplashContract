@@ -1,3 +1,5 @@
 node_modules
 metadata.json
 metadata/
+cache/
+artifacts/
