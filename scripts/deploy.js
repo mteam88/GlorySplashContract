@@ -5,8 +5,8 @@ async function main() {
   
     console.log("Account balance:", (await deployer.getBalance()).toString());
   
-    const Token = await ethers.getContractFactory("Token");
-    const token = await Token.deploy();
+    const GlorySplashes = await ethers.getContractFactory("GlorySplashes");
+    const token = await GlorySplashes.deploy();
   
     console.log("Token address:", token.address);
   }
