@@ -11,11 +11,12 @@ class Metadata(dict):
     def __init__(self, mdid, name, filetype=".jpg"):
         self["mdid"] = mdid
         self["name"] = name
-        self["image"] = f"ipfs://QmXsEyW6vNFrjLmiBcJFCA2LDy53jnPRLFPnib8Z5HYqXd/{mdid}{filetype}"
+        self["image"] = f"ipfs://QmSCc3jErd3cjbqcZqp4UP6UBw383ioZDcZGedhv5jeH7Q/{mdid}{filetype}"
         self["description"] = self.getdescriptionfromname(name)
 
     @staticmethod
     def getdescriptionfromname(name):
+        print(f"Getting description from gpt-2 AI using name: {name}")
         r = requests.post(
             "https://api.deepai.org/api/text-generator",
             data={
